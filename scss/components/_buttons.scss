@@ -1,0 +1,24 @@
+// Buttons --------- //
+
+.btn {
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+@each $button, $color in $buttons {
+  .#{$button} {
+    background-color: $color;
+    transition: 
+      background-color .2s ease-in-out, 
+      color .2s ease-in-out;
+    &:hover {
+      background-color: lighten($color, 15%);
+      color: $color-font;
+    }
+  }
+}

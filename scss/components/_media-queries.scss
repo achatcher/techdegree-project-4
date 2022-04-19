@@ -1,0 +1,55 @@
+// Media Queries --------- //
+
+@media (min-width: $break-m) {
+
+  .container {
+    @include center($max-width: 1400px);
+  }
+  
+  .centered {
+    @include center();
+  }
+  
+  .row {
+    flex-direction: row;
+  }
+  
+  [class^=col] {
+    @include flexy($just: center);
+    margin-top: 0;
+    align-items: center;
+  }
+  
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
+  
+  @each $col, $flex in $cols {
+    .col-#{$col} {
+        flex-basis: divide($col, $columns);
+    }
+  }
+ 
+  .nav {
+    @include flexy($just: flex-end, $disp: null, $dir: row);
+    align-items: center;
+  }
+  
+  .nav-link {
+    @include flexy($basis: 100px, $disp: null);
+  }
+  
+  .btn {
+    padding: 10px 30px;
+  }
+  
+  .btn + .btn {
+    margin-left: 10px;
+  }
+  
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
+  
+  }

@@ -1,0 +1,19 @@
+// Images --------- //
+
+.img-avatar,
+.img-frame {
+  @include center($max-width: 100%, $margin-top: 10px, $disp: block);
+}
+
+.img-avatar {
+  max-height: 100%;
+}
+
+.img-frame {
+  padding: 13px;
+  border: 1px solid #ccc;
+}
+
+.img-logo {
+  @include center();
+}

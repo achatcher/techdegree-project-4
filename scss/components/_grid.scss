@@ -1,0 +1,27 @@
+// Grid System --------- //
+
+.container {
+  padding: 0 10px;
+}
+
+.row {
+  @include flexy($dir: column);
+  padding: 1em 10px;
+}
+
+[class^=col] {
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.theme.col- {
+  @include themes($themes);
+}
+
+
+.card {
+  flex-basis: 100%;
+}
